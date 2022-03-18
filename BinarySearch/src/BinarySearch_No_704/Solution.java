@@ -21,4 +21,22 @@ public class Solution {
 
         return search(nums, mid + 1, r, target);
     }
+
+    public int search1(int[] data, int target) {
+
+        int l = 0, r = data.length;
+        while (l < r) {
+
+            int mid = l + (r - l) / 2;
+
+            if (data[mid] == target)
+                return mid;
+
+            if (data[mid] < target)
+                l = mid + 1;
+            else
+                r = mid;
+        }
+        return -1;
+    }
 }
