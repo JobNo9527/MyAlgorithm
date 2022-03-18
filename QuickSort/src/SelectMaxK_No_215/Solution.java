@@ -18,6 +18,24 @@ public class Solution {
         return selectK(arr, p + 1, r, k, rnd);
     }
 
+    private static int selectK1(int[] arr, int k, Random rnd) {
+
+        int l = 0, r = arr.length - 1;
+        while (l <= r) {
+
+            int p = partition(arr, l, r, rnd);
+
+            if (k == p)
+                return arr[p];
+
+            if (k < p)
+                r = p - 1;
+            else
+                l = p + 1;
+        }
+        throw new RuntimeException("No Solution.");
+    }
+
     private static int partition(int[] arr, int l, int r, Random rnd) {
         int p = l + rnd.nextInt(r - l + 1);
         swap(arr, l, p);
