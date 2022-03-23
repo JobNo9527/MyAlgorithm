@@ -58,16 +58,10 @@ public class SelectionSort {
 
 
         //基础模版
-        /*
         int[] dataSize = {10000, 100000};
         for (int n : dataSize) {
             Integer[] arr = ArrayGenerator.generateRandomArray(n, n);
             SortingHelper.sortTest("SelectionSort", arr);
         }
-         */
-
-        int n = 80000;
-        Integer[] arr1 = ArrayGenerator.generateRandomArray(n, n);
-        SortingHelper.sortTest("SelectionSort", arr1, n);
     }
 }

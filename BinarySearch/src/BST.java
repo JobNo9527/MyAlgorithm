@@ -1,9 +1,6 @@
 /*
     类型要满足拥有可比较性
  */
-
-import org.w3c.dom.Node;
-
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;

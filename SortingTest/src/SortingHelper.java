@@ -1,8 +1,3 @@
-/**
- * @author 将晖
- */
-
-
 public class SortingHelper {
 
     private SortingHelper() {
@@ -19,10 +14,16 @@ public class SortingHelper {
 
     public static <E extends Comparable<E>> void sortTest(String sortName, E[] arr) {
 
-        //随机情况下
         long start = System.nanoTime();
-        if (sortName.equals("SelectionSort"))
-            SelectionSort.sort(arr);
+        switch (sortName) {
+            case "SelectionSort" -> SelectionSort.sort(arr);
+            case "InsertionSort" -> InsertionSort.sort(arr);
+            case "MergeSort" -> MergeSort.sort(arr);
+            case "QuickSort" -> QuickSort.sort(arr);
+            case "HeapSort" -> HeapSort.sort(arr);
+            case "QuickSort2Ways" -> QuickSort2Ways.sort2ways(arr);
+            case "QuickSort3Ways" -> QuickSort3Ways.sort3ways(arr);
+        }
         long end = System.nanoTime();
         double time = (end - start) / 1000000000.0;
 

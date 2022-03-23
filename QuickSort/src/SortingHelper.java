@@ -16,30 +16,9 @@ public class SortingHelper {
 
         long start = System.nanoTime();
         switch (sortName) {
-            case "SelectionSort":
-                SelectionSort.sort(arr);
-                break;
-            case "InsertionSort":
-                InsertionSort.sort(arr);
-                break;
-            case "MergeSort":
-                MergeSort.sort(arr);
-                break;
-            case "MergeSortBU":
-                MergeSort.sortBU(arr);
-                break;
-            case "MergeSortBUInsertion":
-                MergeSort.sortBUInsertion(arr);
-                break;
-            case "QuickSort":
-                QuickSort.sort(arr);
-                break;
-            case "QuickSort2Ways":
-                QuickSort2Ways.sort2ways(arr);
-                break;
-            case "QuickSort3Ways":
-                QuickSort3Ways.sort3ways(arr);
-                break;
+            case "QuickSort" -> QuickSort.sort(arr);
+            case "QuickSort2Ways" -> QuickSort2Ways.sort2ways(arr);
+            case "QuickSort3Ways" -> QuickSort3Ways.sort3ways(arr);
         }
         long end = System.nanoTime();
         double time = (end - start) / 1000000000.0;

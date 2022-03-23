@@ -48,6 +48,6 @@ public class MergeSort {
 
         int n = 800000;
         Integer[] array = ArrayGenerator.generateRandomArray(n, n);
-        SortingHelper.sortTest("MergeSort", array, n);
+        SortingHelper.sortTest("MergeSort", array);
     }
 }

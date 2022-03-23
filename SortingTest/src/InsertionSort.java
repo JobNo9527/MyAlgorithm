@@ -1,10 +1,3 @@
-import java.util.Arrays;
-
-/**
- * @author 将晖
- */
-
-
 public class InsertionSort {
 
     private InsertionSort() {
@@ -21,21 +14,7 @@ public class InsertionSort {
             for (j = i; j - 1 >= 0 && temp.compareTo(arr[j - 1]) < 0; j--) {
                 arr[j] = arr[j - 1];
             }
-            arr[j] = temp;
-        }
-    }
-
-    // 插入排序从l到r进行
-    public static <E extends Comparable<E>> void sort(E[] arr,int l,int r) {
-
-        for (int i = l; i < r; i++) {
-
-            //将 arr[i] 插入到合适的位置
-            E temp = arr[i];
-            int j;
-            for (j = i; j - 1 >= l && temp.compareTo(arr[j - 1]) < 0; j--) {
-                arr[j] = arr[j - 1];
-            }
+            //这时候arr[j]存的是合适位置的数
             arr[j] = temp;
         }
     }
@@ -58,29 +37,10 @@ public class InsertionSort {
 
     public static void main(String[] args) {
 
-        int[] dataSize = {10000, 100000};
-        for (int n : dataSize) {
-
-            System.out.println("Random Array : ");
-
-            Integer[] arr = ArrayGenerator.generateRandomArray(n, n);
-            Integer[] arr2 = Arrays.copyOf(arr, arr.length);
-
-            SortingHelper.sortTest("InsertionSort", arr);
-            SortingHelper.sortTest("SelectionSort", arr2);
-
-            System.out.println("-----------");
-
-            System.out.println("Ordered Array : ");
-
-            arr = ArrayGenerator.generateOrderedArray(n);
-            arr2 = Arrays.copyOf(arr, arr.length);
-
-            SortingHelper.sortTest("InsertionSort", arr);
-            SortingHelper.sortTest("SelectionSort", arr2);
-
-            System.out.println("-----------");
-        }
+        int n = 70000;
+        Integer[] arr = ArrayGenerator.generateRandomArray(n, n);
+        InsertionSort.sort(arr);
+        SortingHelper.sortTest("Insertion", arr);
     }
 }
 /*

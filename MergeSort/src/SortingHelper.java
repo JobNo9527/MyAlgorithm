@@ -20,16 +20,11 @@ public class SortingHelper {
     public static <E extends Comparable<E>> void sortTest(String sortName, E[] arr) {
 
         long start = System.nanoTime();
-        if (sortName.equals("SelectionSort"))
-            SelectionSort.sort(arr);
-        else if (sortName.equals("InsertionSort"))
-            InsertionSort.sort(arr);
-        else if (sortName.equals("MergeSort"))
-            MergeSort.sort(arr);
-        else if (sortName.equals("MergeSortBU"))
-            MergeSort.sortBU(arr);
-        else if (sortName.equals("MergeSortBUInsertion"))
-            MergeSort.sortBUInsertion(arr);
+        switch (sortName) {
+            case "MergeSort" -> MergeSort.sort(arr);
+            case "MergeSortBU" -> MergeSort.sortBU(arr);
+            case "MergeSortBUInsertion" -> MergeSort.sortBUInsertion(arr);
+        }
         long end = System.nanoTime();
         double time = (end - start) / 1000000000.0;
 
