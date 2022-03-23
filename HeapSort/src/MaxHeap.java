@@ -1,3 +1,7 @@
+/*
+    对于左右孩子的索引计算和父亲节点的计算，去看视频阶段三 -> 堆，优先队列和堆排序 -> 第一章 最大堆，最小堆 -> 1-2
+ */
+
 public class MaxHeap<E extends Comparable<E>> {
 
     private Array<E> data;
@@ -8,6 +12,15 @@ public class MaxHeap<E extends Comparable<E>> {
 
     public MaxHeap() {
         data = new Array<E>();
+    }
+
+    // 将传来的数组转换为堆的情况
+    public MaxHeap(E[] arr) {
+        data = new Array<>(arr);
+        if (arr.length != 1) {
+            for (int i = parent(arr.length - 1); i >= 0; i--)
+                siftDown(i);
+        }
     }
 
     // 返回堆中的元素个数
@@ -70,9 +83,10 @@ public class MaxHeap<E extends Comparable<E>> {
         return ret;
     }
 
+    // 用户所要下沉的索引k的所对应的值
     private void siftDown(int k) {
 
-        // 因为右孩子的索引比左孩子的索引还要大，如果左孩子的索引都越界了，右孩子的索引一定越界，也就是到了k是个叶子节点的时候了
+        // 因为右孩子的索引比左孩子的索引还要大，如果左孩子的索引都越界(>data.getSize())了，右孩子的索引一定越界，也就是到了k是个叶子节点的时候了
         while (leftChild(k) < data.getSize()) {
 
             int j = leftChild(k);   // 此时j+1就是右孩子
@@ -87,5 +101,13 @@ public class MaxHeap<E extends Comparable<E>> {
             data.swap(k, j);
             k = j;  // k下沉进行下一轮比较
         }
+    }
+
+    // 取出队堆中最大的元素，并替换成元素e
+    public E replace(E e) {
+        E ret = findMax();
+        data.set(0, e);
+        siftDown(0);
+        return ret;
     }
 }

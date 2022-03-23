@@ -21,6 +21,7 @@ public class SortingHelper {
             case "MergeSort" -> MergeSort.sort(arr);
             case "QuickSort" -> QuickSort.sort(arr);
             case "HeapSort" -> HeapSort.sort(arr);
+            case "HeapSort2" -> HeapSort.sort2(arr);
             case "QuickSort2Ways" -> QuickSort2Ways.sort2ways(arr);
             case "QuickSort3Ways" -> QuickSort3Ways.sort3ways(arr);
         }
