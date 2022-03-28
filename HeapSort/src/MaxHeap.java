@@ -91,7 +91,7 @@ public class MaxHeap<E extends Comparable<E>> {
 
             int j = leftChild(k);   // 此时j+1就是右孩子
             if (j + 1 < data.getSize() && data.get(j + 1).compareTo(data.get(j)) > 0)
-                j = rightChild(k);  // j++;
+                j = rightChild(k);  // j++; 否则就是左孩子大，j不变就好了
             // data[j] 是leftChild 和 rightChild中的最大值
 
             // 下沉终止条件
