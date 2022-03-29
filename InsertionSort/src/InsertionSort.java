@@ -11,9 +11,8 @@ public class InsertionSort {
             //将 arr[i] 插入到合适的位置
             E temp = arr[i];
             int j;
-            for (j = i; j - 1 >= 0 && temp.compareTo(arr[j - 1]) < 0; j--) {
+            for (j = i; j - 1 >= 0 && temp.compareTo(arr[j - 1]) < 0; j--)
                 arr[j] = arr[j - 1];
-            }
             //这时候arr[j]存的是合适位置的数
             arr[j] = temp;
         }
