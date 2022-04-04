@@ -20,13 +20,15 @@ public class SortingHelper {
             case "InsertionSort" -> InsertionSort.sort(arr);
             case "MergeSort" -> MergeSort.sort(arr);
             case "QuickSort" -> QuickSort.sort(arr);
-            case "HeapSort" -> HeapSort.sort(arr);
-            case "HeapSort2" -> HeapSort.sort2(arr);
             case "QuickSort2Ways" -> QuickSort2Ways.sort2ways(arr);
             case "QuickSort3Ways" -> QuickSort3Ways.sort3ways(arr);
+            case "HeapSort" -> HeapSort.sort(arr);
+            case "HeapSort2" -> HeapSort.sort2(arr);
             case "BubbleSort" -> BubbleSort.sort(arr);
             case "BubbleSort2" -> BubbleSort.sort2(arr);
             case "BubbleSort3" -> BubbleSort.sort3(arr);
+            case "ShellSort" -> ShellSort.sort(arr);
+            case "ShellSort2" -> ShellSort.sort2(arr);
         }
         long end = System.nanoTime();
         double time = (end - start) / 1000000000.0;

@@ -21,9 +21,9 @@ public class Main {
 }
 
 /*
-    MergeSort , n = 10000000 : 5.704302 s
-    QuickSort2Ways , n = 10000000 : 3.852956 s
-    QuickSort3Ways , n = 10000000 : 8.413585 s
-    HeapSort , n = 10000000 : 13.743302 s
-    HeapSort2 , n = 10000000 : 12.680839 s
+MergeSort , n = 10000000 : 5.704302 s
+QuickSort2Ways , n = 10000000 : 3.852956 s
+QuickSort3Ways , n = 10000000 : 8.413585 s
+HeapSort , n = 10000000 : 13.743302 s
+HeapSort2 , n = 10000000 : 12.680839 s
  */

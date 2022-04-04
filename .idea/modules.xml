@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/MergeSort/MergeSort.iml" filepath="$PROJECT_DIR$/MergeSort/MergeSort.iml" />
       <module fileurl="file://$PROJECT_DIR$/QuickSort/QuickSort.iml" filepath="$PROJECT_DIR$/QuickSort/QuickSort.iml" />
       <module fileurl="file://$PROJECT_DIR$/SelectionSort/SelectionSort.iml" filepath="$PROJECT_DIR$/SelectionSort/SelectionSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ShellSort/ShellSort.iml" filepath="$PROJECT_DIR$/ShellSort/ShellSort.iml" />
       <module fileurl="file://$PROJECT_DIR$/SortingTest/SortingTest.iml" filepath="$PROJECT_DIR$/SortingTest/SortingTest.iml" />
     </modules>
   </component>
