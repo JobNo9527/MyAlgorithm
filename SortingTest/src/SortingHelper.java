@@ -16,9 +16,11 @@ public class SortingHelper {
 
         long start = System.nanoTime();
         switch (sortName) {
+            // 比较排序
             case "SelectionSort" -> SelectionSort.sort(arr);
             case "InsertionSort" -> InsertionSort.sort(arr);
             case "MergeSort" -> MergeSort.sort(arr);
+            case "MergeSortBU" -> MergeSort.sortBU(arr);
             case "QuickSort" -> QuickSort.sort(arr);
             case "QuickSort2Ways" -> QuickSort2Ways.sort2ways(arr);
             case "QuickSort3Ways" -> QuickSort3Ways.sort3ways(arr);
@@ -29,6 +31,25 @@ public class SortingHelper {
             case "BubbleSort3" -> BubbleSort.sort3(arr);
             case "ShellSort" -> ShellSort.sort(arr);
             case "ShellSort2" -> ShellSort.sort2(arr);
+            // 非比较排序
+            case "LSDSort" -> {
+                String[] strArr = (String[]) arr;
+                if (strArr.length == 0) throw new IllegalArgumentException("arr can not be empty.");
+                LSDSort.sort(strArr, strArr[0].length());
+            }
+            case "MSDSort" -> {
+                String[] strArr = (String[]) arr;
+                MSDSort.sort(strArr);
+            }
+            case "BucketSort" -> {
+                Integer[] intArr = (Integer[]) arr;
+                BucketSort.sort(intArr,200);
+            }
+
+            case "BucketSort2" -> {
+                Integer[] intArr = (Integer[]) arr;
+                BucketSort.sort2(intArr, 100);
+            }
         }
         long end = System.nanoTime();
         double time = (end - start) / 1000000000.0;

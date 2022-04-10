@@ -34,6 +34,23 @@ public class InsertionSort {
 
     }
 
+    // 用于优化归并排序算法
+    // 插入排序从[l,r]排序
+    public static <E extends Comparable<E>> void sort(E[] arr, int l, int r) {
+
+        for (int i = l; i < r; i++) {
+
+            //将 arr[i] 插入到合适的位置
+            E temp = arr[i];
+            int j;
+            for (j = i; j - 1 >= l && temp.compareTo(arr[j - 1]) < 0; j--) {
+                arr[j] = arr[j - 1];
+            }
+            //这时候arr[j]存的是合适位置的数
+            arr[j] = temp;
+        }
+    }
+
 
     public static void main(String[] args) {
 
