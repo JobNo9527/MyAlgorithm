@@ -8,9 +8,10 @@ public class SubstringMatchHelper {
         int pos = -1;
 
         long startTime = System.nanoTime();
-        if (name.equals("bruteforce")) {
+        if (name.equals("bruteforce"))
             pos = SubstringMatch.bruteforce(s, t);
-        }
+        else if (name.equals("rabinKarp"))
+            pos = SubstringMatch.rabinKarp(s, t);
         long endTime = System.nanoTime();
 
         double time = (endTime - startTime) / 1000000000.0;
