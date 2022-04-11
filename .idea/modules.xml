@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/SelectionSort/SelectionSort.iml" filepath="$PROJECT_DIR$/SelectionSort/SelectionSort.iml" />
       <module fileurl="file://$PROJECT_DIR$/ShellSort/ShellSort.iml" filepath="$PROJECT_DIR$/ShellSort/ShellSort.iml" />
       <module fileurl="file://$PROJECT_DIR$/SortingTest/SortingTest.iml" filepath="$PROJECT_DIR$/SortingTest/SortingTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SubstringMatch/SubstringMatch.iml" filepath="$PROJECT_DIR$/SubstringMatch/SubstringMatch.iml" />
     </modules>
   </component>
 </project>
